@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Sandbox prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/index-CS0z6fgt.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DeSCZd8v.css">
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div id="fallback-cell" aria-hidden="true"></div>
+  <main>
+    <header>
+      <h1>See how it plays out.</h1>
+      <p class="sub">Drag to change how well T4 converts.</p>
+    </header>
+    <div id="badge" role="note"><span>Brain's reading</span><b>TSH in range ✓</b></div>
+    <ul id="symptoms" aria-label="Symptoms">
+      <li>Exhausted by noon</li><li>Brain fog</li><li>Weight won't move</li>
+      <li class="micro">Many patients describe these when conversion is low.</li>
+    </ul>
+    <section id="panel" aria-label="Lab pattern sandbox">
+      <div class="row"><span>TSH</span><div class="band"><i></i><b data-band="tsh"></b></div></div>
+      <div class="row"><span>Free T4</span><div class="band"><i></i><b data-band="ft4"></b></div></div>
+      <div class="row"><span>Free T3</span><div class="band"><i></i><b data-band="ft3"></b></div></div>
+      <div class="row"><span>Reverse T3</span><div class="band"><i></i><b data-band="rt3"></b></div></div>
+      <label for="conversion" class="ends"><span>Conversion stalls</span><span>Converts well</span></label>
+      <input id="conversion" type="range" min="0" max="100" value="90" aria-describedby="status" />
+      <div class="presets">
+        <button type="button" data-preset="0.92">Textbook</button>
+        <button type="button" data-preset="0.15">Normal TSH, still struggling</button>
+      </div>
+      <p class="disclaimer">An illustration of a pattern, not your labs and not a diagnosis.</p>
+      <p id="status" class="sr-only" aria-live="polite"></p>
+    </section>
+  </main>
+  <pre id="hud" hidden></pre>
+</body>
+</html>
